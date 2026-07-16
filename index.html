@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/global.css">
+    
+    
+</head>
+<body>
+
+    <div id="app">
+
+         <header id="header" class="header" >
+             <div class="header-title">Hamster Kombat</div>
+             <div class="header_info"> 
+                    <div class="header_info_user">
+                        <img src="./assets/ava.png" alt="">
+                        <span id="user-name">Tunec</span>
+                    </div>
+                    
+                    <div class="header_info_binance">
+                        <img src="./assets/Frame 3.png" alt="">
+                    </div>
+            </div>
+         </header>
+
+         <main id="main" class="main">
+            <div class="main-header-stats">
+                <div class="main-header-stats-item main-header-stats-item-1">
+                    <p>Earn per tap</p>
+                    <div><img src="./assets/Group 9.png" alt=""><span id="earn-per-tap"></span></div>
+                </div>
+                <div class="main-header-stats-item main-header-stats-item-2">
+                    <p>Coins to level up</p>
+                    <span id="coins-to-level-up">1000</span>
+                </div>
+                <div class="main-header-stats-item main-header-stats-item-3">
+                    <p>Profit per hour</p>
+                    <div><img src="./assets/Group 9.png" alt=""><span id="profit-per-hour">0</span></div>
+                </div>
+            </div>
+            <div class="main-wallet">
+                <img src="./assets/Group 9.png" alt="">
+                <span id="current-wallet-state">0</span>
+            </div>
+            <div class="main-lvl-info">
+                <div class="main-lvl-info-config">
+                    <div id="user-rank">Beginner ></div>
+                    <div>level <span id="user-level">0</span>/10</div>
+                </div>
+                <div class="main-lvl-bar">
+                    <div id="main-lvl-bar-range" class="main-lvl-bar-range"></div>
+                </div>
+
+            </div>
+            <div class="main-hamster-tap">
+                    <button id="hamster-tap" class="hamster-tap"><img draggable="false" src="./assets/image 1.png" alt=""></button>
+            </div>
+
+            <div class="main-energy-stats">
+                <div>
+                    <img src="./assets/Vector.png" alt=""><span id="user-energy">1000</span>/ <span id="user-energy-max">1000</span>
+                </div>
+                <div>Boost</div>
+            </div>
+
+            <nav class="main-bot-nav">
+                <button class="nav-btn nav-btn-active">
+                    <img src="./assets/Union.png" alt="">
+                    <p>Exchange</p>
+                </button>
+
+                <button class="nav-btn ">
+                    <img src="./assets/Group.png" alt="">
+                    <p>Mine</p>
+                </button>
+
+                <button class="nav-btn ">
+                    <img src="./assets/Group (1).png" alt="">
+                    <p>Friends</p>
+                </button>
+
+                <button class="nav-btn ">
+                    <img src="./assets/Group8.png" alt="">
+                    <p>Earn</p>
+                </button>
+                <button class="nav-btn ">
+                    <img src="./assets/image 2.png" alt="">
+                    <p>Airdrop</p>
+                </button>
+            </nav>
+
+         </main>
+
+
+
+    </div>
+<script src="./utils/animate.js"></script>
+<script src="./js/state.js" ></script>
+<script src="./js/logic.js" ></script>
+<script src="./js/storage.js" ></script>
+<script src="./js/render.js" ></script>
+<script src="./js/game.js" ></script>
+
+<!-- Стартер -->
+
+<script>
+    init();
+</script>
+
+</body>
+</html>
