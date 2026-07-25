@@ -37,6 +37,10 @@ function init(account=DEFAULT_SETTINGS) {
         
     })
 
+    const autoSaveId = setInterval(()=>{
+        saveData(state);
+    },1000)
+
     window.addEventListener('keydown',(e)=>{
         if(e.key == 's'){
             let isConfirmed = confirm('Вы хотите сохранить прогресс на слот memory-card?')

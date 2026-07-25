@@ -2,7 +2,7 @@
 
 function handleTap(state) {
 
-  if(state.energy - state.coin_per_tap <= 0)return
+  if(state.energy <= 0) return;
 
   // let copy = {...state};  Полное копирование
   console.log('handle tap')
