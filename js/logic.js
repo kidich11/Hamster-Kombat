@@ -2,11 +2,11 @@
 
 function handleTap(state) {
 
-  if(state.energy <= 0)return
+  if(state.energy - state.coin_per_tap <= 0)return
 
   // let copy = {...state};  Полное копирование
   console.log('handle tap')
-  state.balance += state.coin_per_tap();// Прибавили монету в баланс
+  state.balance += coin_per_tap(state);// Прибавили монету в баланс
   animate(DOM.hamster_tap);
   updateExp(state);
   energyPerTap(state);
@@ -16,12 +16,13 @@ function handleTap(state) {
 function updateExp(state){
   lvlUp(state)
   state.exp += 1
-  console.log('Your exp:',state.exp)
+  
 }
 
 function energyPerTap(state){
-  state.energy -=state.coin_per_tap();
-  console.log('Your energy:',state.energy)
+  state.energy -=coin_per_tap(state);
+  
+  
 }
 
 function lvlUp(state){
@@ -47,7 +48,7 @@ function profitPerSec(state){
 // Востановление энергии
 
 function energyRecovery(state){
-  state.energy += 1
+  state.energy += coin_per_tap(state)
   if(state.energy >= 1000){
     state.energy=1000
   }

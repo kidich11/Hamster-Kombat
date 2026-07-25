@@ -152,10 +152,12 @@
     align-items: center;                                  
     background: radial-gradient(circle, #7276dd,#1C2848);                                  
     border-radius: 50%;                                  
-    width: 300px;                                  
+    width: 300px;      
+    height: 300px;                            
     border: 10px solid #5155DA;  
     img{
         user-select: none;
+        width: 290px;
     }                                
 }                                  
 

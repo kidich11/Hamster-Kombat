@@ -7,8 +7,17 @@ const DEFAULT_SETTINGS = {
 
 
 function init(account=DEFAULT_SETTINGS) {
+    let state; 
+    let data = loadData();
 
-    let state = createAccount(account);
+    if(data){
+        state = loadAccount(data)
+    }else{
+        state = createAccount(account)
+    }
+    console.log('Проверка из game.js',data)
+
+    
 
     renderAll(state); //Рендерим первичный стейт
 
@@ -27,6 +36,20 @@ function init(account=DEFAULT_SETTINGS) {
         update(state);
         
     })
+
+    window.addEventListener('keydown',(e)=>{
+        if(e.key == 's'){
+            let isConfirmed = confirm('Вы хотите сохранить прогресс на слот memory-card?')
+            if(isConfirmed){
+                saveData(state)
+            }
+        }
+
+        if(e.key == 'd'){
+                deleteData(state)
+        }
+    })
+
     // Loop
         const loop = () => {
        update(state);
