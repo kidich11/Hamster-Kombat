@@ -41,9 +41,9 @@ function init(account=DEFAULT_SETTINGS) {
         saveData(state);
     },1000)
 
-    window.addEventListener('keydown',(e)=>{
+    window.addEventListener('onclick',(e)=>{
         if(e.key == 's'){
-            let isConfirmed = confirm('Вы хотите сохранить прогресс на слот memory-card?')
+            let isConfirmed = alert('Прогресс успешно сохранен')
             if(isConfirmed){
                 saveData(state)
             }
